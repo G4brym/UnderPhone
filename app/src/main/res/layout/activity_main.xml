@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#35454D"
+    tools:context=".MainActivity">
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_overlay"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <pt.technic.underphone.Views.AppLaunchClockView
+                    android:id="@+id/textClock"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="time"
+                    android:paddingTop="16.0dip"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="56sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="64dip">
+
+                <pt.technic.underphone.Views.AppLaunchView
+                    android:id="@+id/appLaunch1"
+                    style="@style/AppLaunchStyle" />
+
+                <pt.technic.underphone.Views.AppLaunchView
+                    android:id="@+id/appLaunch2"
+                    style="@style/AppLaunchStyle" />
+
+                <pt.technic.underphone.Views.AppLaunchView
+                    android:id="@+id/appLaunch3"
+                    style="@style/AppLaunchStyle" />
+
+                <pt.technic.underphone.Views.AppLaunchView
+                    android:id="@+id/appLaunch4"
+                    style="@style/AppLaunchStyle" />
+
+                <pt.technic.underphone.Views.AppLaunchView
+                    android:id="@+id/appLaunch5"
+                    style="@style/AppLaunchStyle" />
+
+                <pt.technic.underphone.Views.AppLaunchView
+                    android:id="@+id/appLaunch6"
+                    style="@style/AppLaunchStyle" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="8dip">
+
+                <pt.technic.underphone.Views.AppLaunchImageView
+                    android:id="@+id/imageView1"
+                    style="@style/app_launch_footer"
+                    app:srcCompat="@mipmap/ic_launcher_round" />
+
+                <pt.technic.underphone.Views.AppLaunchImageView
+                    android:id="@+id/imageView2"
+                    style="@style/app_launch_footer"
+                    app:srcCompat="@mipmap/ic_launcher_round" />
+
+                <pt.technic.underphone.Views.AppLaunchImageView
+                    android:id="@+id/imageView3"
+                    style="@style/app_launch_footer"
+                    app:srcCompat="@mipmap/ic_launcher_round" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>
